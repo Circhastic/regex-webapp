@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
 
-body {
+* {
     margin: 0;
     font-family: Poppins;
-}
-
-header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
 }
 
 .container {
     display: flex;
 }
 
-.left-column {
+.left-sidebar {
     width: 20%;
     background-color: #171616;
     position: fixed;
@@ -24,7 +18,7 @@ header {
 }
 
     
-.left-column img {
+.left-sidebar img {
     width:16VW;
     border-radius: 15px;
     margin-left: auto;
@@ -35,7 +29,7 @@ header {
   
 }
 
-.left-column .logo {
+.left-sidebar .logo {
     width: 16vw; 
     height: 7vh;
     margin-left: auto;
@@ -43,7 +37,7 @@ header {
     display: block;
 }
 
-.left-column {
+.left-sidebar {
     width: 20%;
     background-color: #171616;
     padding-top: 7vh;
@@ -52,22 +46,6 @@ header {
     overflow-y: hidden;
     text-align: center;
 }
-
-
-#background{
-margin-top: -10vh;
-margin-left: -20px;
-margin-right: 20px;
-width: 21vw;
-height: 50vh;
-background-image: url('image.png');
-background-size: cover;
-opacity: 0.2;
-
-}
-
-
-
 
 .dropdown-container {
     margin-bottom: 20px;
@@ -107,13 +85,6 @@ opacity: 0.2;
     color: #fff;
 }
 
-
-.right-column {
-    flex: 1;
-    margin-left: 20%; 
-    padding: 20px;
-    margin-top: 2vw;
-}
 
 p {
     color: #fff;
