@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column {
+    width: 20%;
+    background-color: #171616;
+    position: fixed;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+    
+.left-column img {
+    width:16VW;
+    border-radius: 15px;
+    margin-left: auto;
+     margin-right: auto;
+    height: 30VH;
+    display: block;
+    margin-bottom: 20px;
+  
+}
+
+.left-column .logo {
+    width: 16vw; 
+    height: 7vh;
+    margin-left: auto;
+     margin-right: auto;
+    display: block;
+}
+
+.left-column {
+    width: 20%;
+    background-color: #171616;
+    padding-top: 7vh;
+    position: fixed;
+    height: 100%;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+
+#background{
+margin-top: -10vh;
+margin-left: -20px;
+margin-right: 20px;
+width: 21vw;
+height: 50vh;
+background-image: url('image.png');
+background-size: cover;
+opacity: 0.2;
+
+}
+
+
+
+
+.dropdown-container {
+    margin-bottom: 20px;
+}
+
+#regexDropdown {
+    width: 50%; 
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size:1vw;
+}
+
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px 0; 
+    background-color: #ffffff;
+    color: #171616;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    cursor: pointer;
+    font-family: Poppins;
+    font-size:1vw;
+
+}
+.buttons button:hover {
+    background-color: #322f2f;
+    color: #fff;
+}
+
+
+.right-column {
+    flex: 1;
+    margin-left: 20%; 
+    padding: 20px;
+    margin-top: 2vw;
+}
+
+p {
+    color: #fff;
+    background-color: #322f2f; /* alam mo ba kung paano lagyan buong row*/  
+}
+
