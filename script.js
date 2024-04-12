@@ -36,12 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Switch between DFA choices
         currentDFA = currentDFA === 1 ? 2 : 1;
         currentAlphabet = currentAlphabet === 1 ? 2 : 1;
-        // Update the content of the <p id="current_regex"> element
+
+        // Update the content of the displayed current regex and alphabet
         currentRegexElement.textContent = regexOptions[currentDFA];
         currentAlphabetElement.textContent = alphabetOptions[currentAlphabet];
+
         // Update the placeholder of the input field
         inputField.placeholder = placeholderOptions[currentDFA];
-        // Clear the input field
+
+        // Clears the input field
         inputField.value = '';
         console.log('Switched DFA to:', currentDFA);
     });
@@ -57,7 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         .then(response => response.json())
         .then(data => {
-            console.log('Simulation result:', data);
+            let fetchedValues = Object.values(data);
+            let isValid = fetchedValues[0]; 
+            let transitionPath = fetchedValues[1];
+
+            console.log('Valid?', isValid);
+            console.log('Transition Path:', transitionPath);
+
             // TODO update the UI based on the simulation result
         })
         .catch(error => {
