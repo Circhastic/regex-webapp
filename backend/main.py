@@ -1,7 +1,15 @@
-from fastapi import FastAPI, Path, HTTPException
+from fastapi import FastAPI, Path
 from DFA import *
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with the URL of your frontend
+    allow_methods=["GET"],
+    allow_headers=["Content-Type"],
+)
 
 @app.get("/")
 def home():

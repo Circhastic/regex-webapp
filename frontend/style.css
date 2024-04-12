@@ -2,92 +2,48 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Poppins;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
 }
 
-.left-sidebar {
-    width: 20%;
-    background-color: #171616;
-    position: fixed;
-    height: 100%;
-    overflow-y: hidden;
+.sidebar {
+    width: 40%;
+    background-color: black;
+    padding: 20px;
+    height: 100vh;
 }
 
-    
-.left-sidebar img {
-    width:16VW;
-    border-radius: 15px;
-    margin-left: auto;
-     margin-right: auto;
-    height: 30VH;
-    display: block;
-    margin-bottom: 20px;
-  
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
-.left-sidebar .logo {
-    width: 16vw; 
-    height: 7vh;
-    margin-left: auto;
-     margin-right: auto;
-    display: block;
+.sidebar-header-logo, .sidebar-header-title {
+    width: 45%;
 }
 
-.left-sidebar {
-    width: 20%;
-    background-color: #171616;
-    padding-top: 7vh;
-    position: fixed;
-    height: 100%;
-    overflow-y: hidden;
-    text-align: center;
-}
-
-.dropdown-container {
-    margin-bottom: 20px;
-}
-
-#regexDropdown {
-    width: 50%; 
-    padding: 10px;
-    border-radius: 10px;
-    font-family: Poppins;
-    font-size:1vw;
-}
-
-
-.buttons {
-    margin-top: 20px;
+.sidebar-menu {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    margin-top: 20px;
 }
 
-.buttons button {
-    padding: 10px 20px;
-    margin: 5px 0; 
-    background-color: #ffffff;
-    color: #171616;
-    border: none;
-    border-radius: 5px;
-    width: 50%;
-    cursor: pointer;
-    font-family: Poppins;
-    font-size:1vw;
-
-}
-.buttons button:hover {
-    background-color: #322f2f;
-    color: #fff;
+.sidebar-menu button, .sidebar-menu input[type="text"] {
+    width: 300px;
+    padding: 10px; /* Adjust as needed */
+    margin: 5px 0; /* Adjust as needed */
+    border-radius: 5px; /* Rounded borders */
 }
 
-
-p {
-    color: #fff;
-    background-color: #322f2f; /* alam mo ba kung paano lagyan buong row*/  
+.sidebar-menu #input, .sidebar-menu #simulate_input {
+    display: flex;
+    justify-content: space-between;
 }
-
