@@ -20,6 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
         2: "0, 1"
     }
 
+    fetch('https://dfa-validator.onrender.com/')
+    .then(response => {
+        if (response.ok) {
+            console.log('Backend is reachable.');
+        } else {
+            console.error('Error pinging backend:', response.status);
+        }
+    })
+    .catch(error => {
+        console.error('Error pinging backend:', error);
+    });
+
     switchDFAButton.addEventListener('click', function() {
         // Switch between DFA choices
         currentDFA = currentDFA === 1 ? 2 : 1;
