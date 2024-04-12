@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     simulateRegexButton.addEventListener('click', function() {
-        // Fetch request to FastAPI backend
+        // Fetch request to backend
         fetch(`https://dfa-validator.onrender.com/check_word/${currentDFA}/${encodeURIComponent(inputField.value)}`)
 
         .then(response => response.json())
         .then(data => {
             console.log('Simulation result:', data);
-            // You can update the UI based on the simulation result here
+            // TODO update the UI based on the simulation result
         })
         .catch(error => {
             console.error('Error:', error);
