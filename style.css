@@ -9,9 +9,10 @@
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
+/* Sidebar menu design */
 .sidebar {
     width: 20%;
     background-color: #171616;
@@ -62,4 +63,11 @@
 .sidebar-menu button:hover {
     background-color: #322f2f;
     color: #fff;
+}
+
+/* TODO here you can change the design of current alphabet and regex */
+.main-content {
+    margin-left: 20%;
+    padding: 20px;
+    width: 80%;
 }
