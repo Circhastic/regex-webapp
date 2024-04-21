@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     simulateRegexButton.addEventListener('click', function() {
         // Fetch request to backend
-        fetch(`https://dfa-validator.onrender.com/check_word/${currentDFA}/${encodeURIComponent(inputField.value)}`)
+        fetch(`https://dfa-validator.onrender.com/check-word/${currentDFA}/${encodeURIComponent(inputField.value)}`)
 
         .then(response => response.json())
         .then(data => {
