@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegEx Wizard</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="img/profile.png">
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img class="sidebar-header-logo" src="img/logo.png" alt="Logo">
+                <img class="sidebar-header-title" src="img/profile.png" alt="Title">
+            </div>
+
+            <div class="sidebar-menu">
+                
+                <div class="sidebar-menu-input">
+                    <input type="text" id="input" placeholder="baabaaba">
+                </div>
+
+                <div class="button-grid">
+                    <button id="validate_input" type="button" class="btn btn-secondary" style="padding: 0px;">Validate</button>
+                    <button id="clear_button" type="button" class="btn btn-secondary">Clear</button>
+
+                    <button id="show_cfg" class="btn btn-secondary">CFG</button>
+                    <div id="pda1_div">
+                        <button id="show_pda" class="btn btn-secondary" style="display: block;">PDA</button>
+                    </div>
+                </div>
+                    
+
+                <div class="d-flex">
+                    <button type="button" class="btn btn-info" id="show_help">Help</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- TODO Display Diagram -->
+            
+                <div id="is_valid" class="alert alert-dismissible alert-success" style="display: none;">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close" id="dismiss-alert"></button>
+                    Inputted string is<strong> VALID!</strong>.
+                </div>
+                <div id="not_valid" class="alert alert-dismissible alert-danger" style="display: none;">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" id="dismiss-error"></button>
+                    Inputted string is<strong> NOT VALID!</strong>
+                </div>
+            <center>    
+                <br><br><br>
+                <div>
+                    <h1><strong>Regular Expression:</strong></h1>
+                    <p id="current_regex" class="current_regex">(a+b) (a+b)* (aa+bb) (ab+ba) (a+b)* (aba+baa)</p>
+    
+                    <h2><strong>Alphabet:</strong></h2>
+                    <p id="current_alphabet" class="current_alphabet">a, b</p>
+                
+                    <button id="switch_dfa" class="btn btn-outline-dark">Switch DFA</button>
+                    <button id="simulate_regex" class="btn btn-outline-dark">Simulate</button>
+                    <!-- DFA SVG -->
+                    <div style="display: block;">
+                        <div id="RegEx_1" style="display: block;">
+                            <embed src="img/dfa_1.svg" style="max-height: 100%"></embed>
+                        </div>
+
+                        <div id="RegEx_2" style="display: none;">
+                            <embed src="img/dfa_2.svg" style="max-height: 100%"></embed>
+                        </div> 
+                            
+                    </div>                    
+                </div>
+                
+                <div class="instructionPDAOverlay" id = "PDA_popup">
+                    <div class="instructionPDABlocker" id ="close2">
+                    </div>
+                    <div class="instructionPDAPopup">
+                        <div class="instructionTitle" id="pda_instruction_1">PDA for RegEx #1</div>
+                        <div class="instructionTitle" id="pda_instruction_2">PDA for RegEx #2</div>
+                        <div class="closePDA" id="closePDA"></div>
+                        
+                        <div id="pda_1"style="display: none;">
+                            <img src="img/pda_1.png" class="active" id="gifPDABorder">
+                        </div>
+
+                        <div id="pda_2" style="display: none;">
+                            <img src="img/pda_2.png" class="active" id="gifPDABorder">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="instructionCFGOverlay" id = "CFG_popup">
+                    <div class="instructionCFGBlocker" id ="close2">
+                    </div>
+                    <div class="instructionCFGPopup">
+                        <div class="instructionTitle" id="cfg_instruction_1">CFG for RegEx #1</div>
+                        <div class="instructionTitle" id="cfg_instruction_2">CFG for RegEx #2</div>
+                        <div class="closeCFG" id="closeCFG"></div>
+                        
+                        <div id="cfg_1"style="display: none;">
+                            <img src="img/cfg_1.png" class="active" id="gifCFGBorder">
+                        </div>
+
+                        <div id="cfg_2" style="display: none;">
+                            <img src="img/cfg_2.png" class="active" id="gifCFGBorder">
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="instructionOverlay" id = "help_popup">
+                    <div class="instructionBlocker" id ="close2">
+                    </div>
+                    <div class="instructionPopup">
+                        <div class="instructionTitle" id="instruction_1">How to use?</div>
+                        <div class="closeHelp" id="closeHelp"></div>
+                        <embed src="RegExWizard_instructions.pdf#zoom=95" class="active" id="gifHelpBorder">
+                    </div>
+                </div>
+            </center>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
